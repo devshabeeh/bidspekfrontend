@@ -21,7 +21,7 @@ const Signin = ({ setUser }) => {
   // For Google
   const googleAuth = () => {
     window.open(
-      `${process.env.REACT_APP_API_URL}/auth/google/callback`,
+      `http://bidspek.com:8080/auth/google/callback`,
       "_self"
     );
   };
@@ -29,7 +29,7 @@ const Signin = ({ setUser }) => {
   // For Linkedin
   const linkedinAuth = () => {
     window.open(
-      `${process.env.REACT_APP_API_URL}/auth/linkedin/callback`,
+      `http://bidspek.com:8080/auth/linkedin/callback`,
       "_self"
     );
   };
@@ -62,7 +62,7 @@ const Signin = ({ setUser }) => {
     // Add your sign-in logic here
     try {
       const response = await axios.post(
-        `${process.env.REACT_APP_API_URL}/engineer/login`,
+        `http://bidspek.com:8080/engineer/login`,
         { email, password }
       );
       console.log(response.data, "hey");

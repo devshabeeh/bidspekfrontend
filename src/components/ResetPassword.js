@@ -23,7 +23,7 @@ const ResetPassword = () => {
     e.preventDefault();
     try {
       const res = await axios.put(
-        `${process.env.REACT_APP_API_URL}/engineer/reset-password`,
+        `$http://bidspek.com:8080/engineer/reset-password`,
         {
           token: token,
           password: password,

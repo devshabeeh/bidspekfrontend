@@ -118,7 +118,7 @@ const DisplayData = ({ user, props, index }) => {
     const engineerId = localStorage.getItem("engineerId");
     const config = {
       method: "patch",
-      url: `${process.env.REACT_APP_API_URL}/engineer/updateprofile/${engineerId}`,
+      url: `http://bidspek.com:8080/engineer/updateprofile/${engineerId}`,
       headers: {
         "Content-Type": "application/json",
       },
@@ -169,7 +169,7 @@ const DisplayData = ({ user, props, index }) => {
   //   const engineerId = localStorage.getItem("engineerId");
   //   axios
   //     .patch(
-  //       `${process.env.REACT_APP_API_URL}/engineer/profileupload/${engineerId}`,
+  //       `http://bidspek.com:8080/engineer/profileupload/${engineerId}`,
   //       formData,
   //       {
   //         headers: {

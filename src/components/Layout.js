@@ -53,7 +53,7 @@ const Layout = ({ user }) => {
   const tempFileURL = localStorage.getItem(`image_url${i}`);
 
   const logout = () => {
-    window.open(`${process.env.REACT_APP_API_URL}/auth/logout`, "_self");
+    window.open(`http://bidspek.com:8080/auth/logout`, "_self");
     localStorage.removeItem(`image_url${i}`);
     localStorage.removeItem("engineerId");
     localStorage.removeItem("occupation");
@@ -100,7 +100,7 @@ const Layout = ({ user }) => {
 
   //     try {
   //       const response = await axios.post(
-  //         `${process.env.REACT_APP_API_URL}/engineer/emailregister/`,
+  //         `http://bidspek.com:8080/engineer/emailregister/`,
   //         {
   //           email: "abc@gmail.com",
   //           // email: `abc${Math.random()}@gmail.com`,

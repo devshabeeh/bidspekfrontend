@@ -22,7 +22,7 @@ export const Testing = () => {
       const engineerId = localStorage.getItem("engineerId");
 
       const response = await axios.patch(
-        `${process.env.REACT_APP_API_URL}/engineer/addfile/${engineerId}`,
+        `http://bidspek.com:8080/engineer/addfile/${engineerId}`,
         formData
       );
 

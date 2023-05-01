@@ -44,7 +44,7 @@ function ImageUploader({ user }) {
       const engineerId = localStorage.getItem("engineerId");
 
       const response = await axios.patch(
-        `${process.env.REACT_APP_API_URL}/engineer/profileupload/${engineerId}`,
+        `http://bidspek.com:8080/engineer/profileupload/${engineerId}`,
         formData
       );
       console.log("Upload response", response);
@@ -75,7 +75,7 @@ function ImageUploader({ user }) {
   //     const engineerId = localStorage.getItem("engineerId");
 
   //     const response = await axios.delete(
-  //       `${process.env.REACT_APP_API_URL}/deleteimage/${engineerId}`
+  //       `http://bidspek.com:8080/deleteimage/${engineerId}`
   //     );
 
   //     // Check the response status to see if the delete was successful.
@@ -111,7 +111,7 @@ function ImageUploader({ user }) {
       }
 
       const response = await axios.delete(
-        `${process.env.REACT_APP_API_URL}/engineer/deleteimage/${engineerId}`
+        `http://bidspek.com:8080/engineer/deleteimage/${engineerId}`
       );
 
       // Check the response status to see if the delete was successful.

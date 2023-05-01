@@ -22,7 +22,7 @@ const Signup = () => {
   // For Google
   const googleAuth = () => {
     window.open(
-      `${process.env.REACT_APP_API_URL}/auth/google/callback`,
+      `http://bidspek.com:8080/auth/google/callback`,
       "_self"
     );
   };
@@ -30,7 +30,7 @@ const Signup = () => {
   // For Linkedin
   const linkedinAuth = () => {
     window.open(
-      `${process.env.REACT_APP_API_URL}/auth/linkedin/callback`,
+      `http://bidspek.com:8080/auth/linkedin/callback`,
       "_self"
     );
   };
@@ -53,7 +53,7 @@ const Signup = () => {
 
     try {
       const response = await axios.post(
-        `${process.env.REACT_APP_API_URL}/engineer/emailregister`,
+        `http://bidspek.com:8080/engineer/emailregister`,
         {
           email: userData["email"],
           password: userData["password"],

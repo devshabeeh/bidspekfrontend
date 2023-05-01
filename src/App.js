@@ -19,7 +19,7 @@ function App() {
   const [user, setUser] = useState(null);
   const getUser = async () => {
     try {
-      const url = `${process.env.REACT_APP_API_URL}/auth/login/success`;
+      const url = `http://bidspek.com:8080/auth/login/success`;
       const { data } = await axios.get(url, { withCredentials: true });
 
       if (
@@ -35,7 +35,7 @@ function App() {
         const password = data.user.password;
 
         // Make a POST request to the /engineer/login route with the email and password
-        const loginUrl = `${process.env.REACT_APP_API_URL}/engineer/login`;
+        const loginUrl = `http://bidspek.com:8080/engineer/login`;
         const loginData = { email, password };
         const { data: loginResult } = await axios.post(loginUrl, loginData, {
           withCredentials: true,

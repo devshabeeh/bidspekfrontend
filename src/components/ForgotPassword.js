@@ -20,7 +20,7 @@ const ForgotPassword = () => {
 
     try {
       const res = await axios.post(
-        `${process.env.REACT_APP_API_URL}/engineer/forgot-password`,
+        `http://bidspek.com:8080/engineer/forgot-password`,
         { email }
       );
       setMessage(res.data.message);

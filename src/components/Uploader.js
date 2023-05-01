@@ -28,7 +28,7 @@ const Uploader = () => {
         if (files[index]) {
           const engineerId = localStorage.getItem("engineerId");
           const fileId = JSON.parse(localStorage.getItem(`fileId${index}`));
-          const url = `${process.env.REACT_APP_API_URL}/engineer/updatefile/${engineerId}/${fileId}`;
+          const url = `http://bidspek.com:8080/engineer/updatefile/${engineerId}/${fileId}`;
           const response = await fetch(url, {
             method: "PATCH",
             body: formData,
@@ -40,7 +40,7 @@ const Uploader = () => {
           // Upload new file
 
           const engineerId = localStorage.getItem("engineerId");
-          const url = `${process.env.REACT_APP_API_URL}/engineer/addfile/${engineerId}`;
+          const url = `http://bidspek.com:8080/engineer/addfile/${engineerId}`;
           const response = await fetch(url, {
             method: "PATCH",
             body: formData,
